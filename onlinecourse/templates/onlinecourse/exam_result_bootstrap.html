@@ -56,6 +56,8 @@
                 <div class="form-check">
                     {% if choice.id in selected_ids and choice.correct == True %}
                         <span style="color:green">Correct Answer: {{ choice.content }}</span>
+                    {% elif choice.id not in selected_ids and choice.correct == False%}
+                        <span style="color:red">Not Selected: {{ choice.content }}</span>
                     {% elif choice.id not in selected_ids and choice.correct == True%}
                         <span style="color:yellow">Not Selected: {{ choice.content }}</span>
                     {% else %}
