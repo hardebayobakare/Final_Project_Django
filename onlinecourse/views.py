@@ -169,10 +169,10 @@ def show_exam_result(request, course_id, submission_id):
                 pass_question = True
             # if choice.id not in selected_choice_ids and choice.correct == False:
             #     pass_question = True
-            if choice.id not in selected_choice_ids and choice.correct == True:
-                pass_question = False
-            if choice.id in selected_choice_ids and choice.correct == False:
-                pass_question = False
+            # if choice.id not in selected_choice_ids and choice.correct == True:
+            #     pass_question = False
+            # if choice.id in selected_choice_ids and choice.correct == False:
+            #     pass_question = False
         if pass_question:
             total_score += 1
         else:
